@@ -8,3 +8,4 @@ Contains some bootstrap related stuff I learnt in school.
 4) Open the terminal with ``` ctrl + ` ```
 5) Run `npm i` in the terminal
 6) Once it is done installing express and nodemon, run `npm run start`
+7) Navigate to `http://localhost:3000`
