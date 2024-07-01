@@ -6,6 +6,7 @@
 	<title>Document</title>
 </head>
 <body>
+	<h1>Create an account</h1>
 	<form action="#" method="POST">
 		<label for="usernameField">username: </label>
 		<input type="text" id="usernameField" placeholder="Enter your username"><br><br>
@@ -13,21 +14,20 @@
 		<input type="email" id="emailField" placeholder="Enter your email"><br><br>
 		<label for="passwordField">password: </label>
 		<input type="password" id="passwordField"><br><br>
-		<label for="passwordField">Enter your Date of Birth: </label>
+		<label for="passwordField">Date of Birth: </label>
 		<input type="tel" id="phoneField"><br><br>
 
-		<label for="character">CHOOSE A CHARACTER</label><br>
+		<label for="character">Select your character</label>
 		<select id="character">
-			<option>blank</option>
+			<option></option>
 			<option>Zhongli</option>
 			<option>Nahida</option>
 			<option>Kokomi</option>
 			<option>Raiden</option>
 		</select><br><br>
 
-		<label for="AgreeCheck"></label>
-		<input type="checkbox" id="agree" name="AgreeCheck" value="1">
-		<label for="agree">Do you agree</label>
+		<label>Do you agree to the terms and conditions</label>
+		<input type="checkbox">
 		<br><br>
 		<button type="submit">Submit</button>
 	</form>
