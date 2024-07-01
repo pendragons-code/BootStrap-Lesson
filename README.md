@@ -9,3 +9,6 @@ Contains some bootstrap related stuff I learnt in school.
 5) Run `npm i` in the terminal
 6) Once it is done installing express and nodemon, run `npm run start`
 7) Navigate to `http://localhost:3000`
+
+## If you just want the html code
+Click on `static` then `html`.
