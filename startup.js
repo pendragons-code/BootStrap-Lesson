@@ -1,8 +1,6 @@
 const express = require('express');
 const path = require("path");
-
 app = express();
-
 
 app.get('/', function (req, res) {
 	try{
@@ -13,7 +11,6 @@ app.get('/', function (req, res) {
 		console.error(error);
 	}
 });
-
 
 app.use(function (req, res, next) {
 	try{
@@ -26,7 +23,6 @@ app.use(function (req, res, next) {
 		console.error(error);
 	}
 });
-
 
 app.use(express.static(__dirname + '/static'));
 
