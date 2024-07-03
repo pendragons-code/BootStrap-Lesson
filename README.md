@@ -12,3 +12,9 @@ Contains some bootstrap related stuff I learnt in school.
 
 ## If you just want the html code
 Click on `static` then `html`.
+
+| URLs |
+|---|
+| [main](http://localhost:3000/html/index.html) |
+| [genshin form](http://localhost:3000/html/genshin_account.html) |
+| [webform](http://localhost:3000/html/webform.html) |

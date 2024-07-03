@@ -8,12 +8,12 @@
 <body>
 	<h1>Create an account</h1>
 	<form action="#" method="POST">
-		<label for="usernameField">username: </label>
-		<input type="text" id="usernameField" placeholder="Enter your username"><br><br>
+		<label for="usernameField">Username: </label>
+		<input type="text" id="usernameField" placeholder="Enter your username" name="username"><br><br>
 		<label for="emailField">Email:</label>
-		<input type="email" id="emailField" placeholder="Enter your email"><br><br>
-		<label for="passwordField">password: </label>
-		<input type="password" id="passwordField"><br><br>
+		<input type="email" id="emailField" placeholder="Enter your email" name="email"><br><br>
+		<label for="passwordField">Password: </label>
+		<input type="password" id="passwordField" name="password"><br><br>
 		<label for="passwordField">Date of Birth: </label>
 		<input type="date" id="password"><br><br>
 
@@ -26,8 +26,8 @@
 			<option>Raiden</option>
 		</select><br><br>
 
-		<label>Do you agree to the terms and conditions</label>
-		<input type="checkbox">
+		<input type="checkbox" name="terms" id="termField">
+		<label for="termField">Do you agree to the terms and conditions</label>
 		<br><br>
 		<button type="submit">Submit</button>
 	</form>
