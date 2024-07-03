@@ -40,27 +40,58 @@
 
 	<form action="#" method="POST" class="container">
 		<h1 class="display1">Create an account!</h1>
-		<label class="form-label" for="usernameField">Username: </label>
-		<input class="form-control" type="text" id="usernameField" placeholder="Enter your username" name="username">
-		<label class="form-label" for="emailField">Email:</label>
-		<input class="form-control" type="email" id="emailField" placeholder="Enter your email" name="email">
-		<label class="form-label" for="passwordField">Password: </label>
-		<input class="form-control" type="password" id="passwordField" name="password">
-		<label class="form-label" for="passwordField">Date of Birth: </label>
-		<input class="form-control" type="date" id="password">
+		<div class="row">
+			<div class="col mb-3">
+				<label class="form-label" for="usernameField">Username: </label>
+				<input class="form-control" type="text" id="usernameField" placeholder="Enter your username"
+					name="username">
+			</div>
+		</div>
 
-		<label class="form-label" for="character">Select your character</label>
-		<select id="character" class="form-select">
-			<option></option>
-			<option>Zhongli</option>
-			<option>Nahida</option>
-			<option>Kokomi</option>
-			<option>Raiden</option>
-		</select>
+		<div class="row">
+			<div class="col mb-3-12 col mb-3-sm-6">
+				<label class="form-label" for="emailField">Email:</label>
+				<input class="form-control" type="email" id="emailField" placeholder="Enter your email" name="email">
+			</div>
 
-		<input class="form-check-input" type="checkbox" name="terms" id="termsField">
-		<label class="form-check-label" for="termsField">Do you agree to the terms and conditions</label>
+			<div class="col mb-3-12 col mb-3-sm-6">
+				<label class="form-label" for="passwordField">Password: </label>
+				<input class="form-control" type="password" id="passwordField" name="password">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col mb-3">
+				<label class="form-label" for="passwordField">Date of Birth: </label>
+				<input class="form-control" type="date" id="password">
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col mb-3">
+				<label class="form-label" for="character">Select your character</label>
+				<select id="character" class="form-select">
+					<option></option>
+					<option>Zhongli</option>
+					<option>Nahida</option>
+					<option>Kokomi</option>
+					<option>Raiden</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col mb-3">
+				<input class="form-check-input" type="checkbox" name="terms" id="termsField">
+				<label class="form-check-label" for="termsField">Do you agree to the terms and conditions</label>
+			</div>
+		</div>
+		<div class="d-grid">
 		<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+
 	</form>
 </body>
 
