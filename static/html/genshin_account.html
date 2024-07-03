@@ -43,28 +43,29 @@
 		<div class="row">
 			<div class="col mb-3">
 				<label class="form-label" for="usernameField">Username: </label>
-				<input required=true class="form-control" type="text" id="usernameField"
-					placeholder="Enter your username" name="username">
+				<input required=true class="form-control" type="text" id="usernameField" placeholder="Enter your username" name="username">
+					<div class="invalid-feedback">Please provide valid username</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col mb-3-12 col mb-3-sm-6">
 				<label class="form-label" for="emailField">Email:</label>
-				<input required=true class="form-control" type="email" id="emailField" placeholder="Enter your email"
-					name="email">
+				<input required=true class="form-control" type="email" id="emailField" placeholder="Enter your email" name="email">
+				<div class="invalid-feedback">Please provide valid email</div>
 			</div>
 
 			<div class="col mb-3-12 col mb-3-sm-6">
 				<label class="form-label" for="passwordField">Password: </label>
 				<input required=true class="form-control" type="password" id="passwordField" name="password">
+				<div class="invalid-feedback">Please provide valid password</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col mb-3">
-				<label class="form-label" for="passwordField">Date of Birth: </label>
-				<input required=true class="form-control" type="date" id="password">
+				<label class="form-label" for="dateOfBirth">Date of Birth: </label>
+				<input class="form-control" type="date" id="dateOfBirth">
 			</div>
 		</div>
 
@@ -73,6 +74,7 @@
 			<div class="col mb-3">
 				<label class="form-label" for="character">Select your character</label>
 				<select id="character" class="form-select" required=true>
+					<div class="invalid-feedback">Please select character</div>
 					<option></option>
 					<option>Zhongli</option>
 					<option>Nahida</option>
@@ -85,8 +87,8 @@
 
 		<div class="row">
 			<div class="col mb-3">
-				<input required=true class="form-check-input required=true" type="checkbox" name="terms"
-					id="termsField">
+				<input required=true class="form-check-input required=true" type="checkbox" name="terms" id="termsField">
+				<div class="invalid-feedback">Please agree to the terms and conditions</div>
 				<label class="form-check-label" for="termsField">Do you agree to the terms and conditions</label>
 			</div>
 		</div>
