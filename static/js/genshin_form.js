@@ -57,20 +57,39 @@ function  updateUserDatabase() {
 				form.addEventListener('submit', event => {
 					event.preventDefault()
 					event.stopPropagation()
-					if (!form.checkValidity()) {
+					if(form.checkValidity()) {
+					if (!form.checkValidity() && isPasswordComplex()) {
 						updateUserDatabase();
 						updatePlayerCount();
 						updatePlayerTable();
 						form.reset();
+						document.getElementById("passwordField").classList.remove("is-invalid");
+						document.getElementById("usernameField").classList.remove("is-invalid");
 					} else {
+						if(!isUsernameUnique()) {
 						document.getElementById("usernameError").classList.add("d-none");
 						document.getElementById("usernameUniqueError").classList.remove("d-none");
 						document.getElementById("usernameField").classList.add("is-invalid");
+						}
+						if(!isPasswordComplex()) {
+							document.getElementById("passwordError").classList.add("d-none");
+							document.getElementById("passwordComplexError").classList.remove("d-none");
+							document.getElementById("passwordField").classList.add("is-invalid");
+						}
 					}
-					form.classList.add('was-validated')
+					} else {
+					form.classList.add('was-validated');
+					}
 				}, false)
 			})
 
+
+			function isPasswordComplex() {
+				let password = document.getElementById("passwordField").value;
+				let passwordRegex = /^[a-zA-Z\d]{8,}$/;
+				let result = passwordRegex.test(password);
+				return result;
+			}
 
 
 function isUsernameUnique() {

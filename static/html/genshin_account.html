@@ -63,7 +63,9 @@
 			<div class="col mb-3-12 col mb-3-sm-6">
 				<label class="form-label" for="passwordField">Password: </label>
 				<input required=true class="form-control" type="password" id="passwordField" name="password">
-				<div class="invalid-feedback">Please provide valid password</div>
+				
+				<div class="invalid-feedback d-none" id="passwordError">Please provide valid password</div>
+				<div class="invalid-feedback d-none" id="passwordComplexError">Password should be at least 8 alphanumeric characters</div>
 			</div>
 		</div>
 
