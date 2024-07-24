@@ -9,8 +9,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
-	<script src="/js/genshin_users.js" defer></script>
-	<script src="/js/genshin_form.js" defer></script>
+		<script src="/js/genshin_users.js"></script>
+		<script src="/js/s.js"></script>
 	<title>Document</title>
 </head>
 
@@ -45,18 +45,15 @@
 		<div class="row">
 			<div class="col mb-3">
 				<label class="form-label" for="usernameField">Username: </label>
-				<input required=true class="form-control" type="text" id="usernameField"
-					placeholder="Enter your username" name="username">
-					<div class="invalid-feedback d-none" id="usernameError">Please provide valid username</div>
-					<div class="invalid-feedback d-none" id="usernameUniqueError">Please provide valid username</div>
+				<input required=true class="form-control" type="text" id="usernameField" placeholder="Enter your username" name="username">
+					<div class="invalid-feedback">Please provide valid username</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col mb-3-12 col mb-3-sm-6">
 				<label class="form-label" for="emailField">Email:</label>
-				<input required=true class="form-control" type="email" id="emailField" placeholder="Enter your email"
-					name="email">
+				<input required=true class="form-control" type="email" id="emailField" placeholder="Enter your email" name="email">
 				<div class="invalid-feedback">Please provide valid email</div>
 			</div>
 
@@ -92,47 +89,35 @@
 
 		<div class="row">
 			<div class="col mb-3">
-				<input required=true class="form-check-input required=true" type="checkbox" name="terms"
-					id="termsField">
+				<input required=true class="form-check-input required=true" type="checkbox" name="terms" id="termsField">
 				<div class="invalid-feedback">Please agree to the terms and conditions</div>
 				<label class="form-check-label" for="termsField">Do you agree to the terms and conditions</label>
 			</div>
 		</div>
 		<div class="d-grid">
 			<button type="submit" class="btn btn-primary">Submit</button>
-			<button type="button" onclick="dummyData()" class="btn btn-primary">Populate</button>
 		</div>
 
 	</form>
-	<div class="container">
-		<hr>
-		<div class="row">
-			<div class="col">
-				<div class="shadow p-3 mb-5 bg-body rounded">
-					<h1 id="playerCount">0</h1>
-					<div>Number of players</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="shadow p-3 mb-5 bg-body rounded">
-					<h1>Nahida</h1>
-					<div>Most popular character</div>
-				</div>
-			</div>
-			<div class="row">
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col">Username</th>
-							<th scope="col">Date Joined</th>
-							<th scope="col">Character</th>
-						</tr>
-					</thead>
-					<tbody id="playerTableBody"></tbody>
-				</table>
-			</div>
-		</div>
-	</div>
 </body>
+
+<script>
+	(() => {
+		'use strict'
+
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms)
+			.forEach(function (form) {
+				form.addEventListener('submit', event => {
+					if (!form.checkValidity()) {
+						event.preventDefault()
+						event.stopPropagation()
+					}
+					form.classList.add('was-validated')
+				}, false)
+			})
+	})()</script>
 
 </html>

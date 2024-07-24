@@ -47,8 +47,7 @@
 				<label class="form-label" for="usernameField">Username: </label>
 				<input required=true class="form-control" type="text" id="usernameField"
 					placeholder="Enter your username" name="username">
-					<div class="invalid-feedback d-none" id="usernameError">Please provide valid username</div>
-					<div class="invalid-feedback d-none" id="usernameUniqueError">Please provide valid username</div>
+				<div class="invalid-feedback">Please provide valid username</div>
 			</div>
 		</div>
 
@@ -134,5 +133,25 @@
 		</div>
 	</div>
 </body>
+
+<script>
+	(() => {
+		'use strict'
+
+		// Fetch all the forms we want to apply custom Bootstrap validation styles to
+		var forms = document.querySelectorAll('.needs-validation')
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(forms)
+			.forEach(function (form) {
+				form.addEventListener('submit', event => {
+					if (!form.checkValidity()) {
+						
+						event.preventDefault()
+						event.stopPropagation()
+					}
+					form.classList.add('was-validated')
+				}, false)
+			})
+	})()</script>
 
 </html>
